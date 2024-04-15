@@ -1,35 +1,24 @@
 import { Footer } from "@/components/Footer";
 import { NavBar } from "@/components/NavBar";
+import Image from "next/image";
 
-export async function getStaticPaths() {
-  const maxPokemons = 251;
-  const api = `https://pokeapi.co/api/v2/pokemon?limit=100000&offset=0`;
-
-  const res = await fetch(`${api}/?limit=${maxPokemons}`);
-
-  const data = await res.json();
-
-  // add pokemon index
-  data.results.forEach((item, page) => {
-    item.id = page + 1;
-  });
-
-  return {
-    props: {
-      pokemons: data.results,
-    },
-  };
-}
-
-export default function Home({ pokemons }) {
+export default function Home() {
   return (
     <>
       <NavBar />
-      <div>
-        <ul>
-          {pokemons &&
-            pokemons.map((pokemon) => <li key={pokemon.id}>{pokemon.name}</li>)}
-        </ul>
+      <div className="w-[50%] items-center justify-center px-10 py-10 grid grid-rows-1 m-auto">
+        <h1 className="font-black text-4xl">Desculpe...</h1>
+        <p className="pt-5 flex items-center justify-center">
+          Desculpe, mas estamos com problemas para continuar usando a API do pokeAPI!!!
+        </p>
+        <div className="pt-10 flex items-center justify-center">
+          <Image
+            src="/images/charizard.png"
+            alt="Charizard"
+            width={300}
+            height={300}
+          />
+        </div>
       </div>
       <Footer />
     </>
