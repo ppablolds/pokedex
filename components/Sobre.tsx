@@ -6,13 +6,9 @@ export function Sobre() {
       <div className="w-[50%] items-center justify-center px-10 py-10 grid grid-rows-1 m-auto">
         <h1 className="font-black text-4xl">Sobre o Projeto</h1>
         <p className="pt-5 flex items-center justify-center">
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Fugiat eius
-          voluptatum, in adipisci corrupti enim, vero, voluptas earum natus
-          veniam cupiditate dicta eos ab molestiae iure deleniti consectetur
-          possimus corporis? Lorem ipsum dolor sit amet consectetur adipisicing
-          elit. Aperiam possimus dicta sunt doloribus saepe, illum facilis
-          reprehenderit quo ex consequatur officiis molestias, incidunt fugiat
-          ab quibusdam a temporibus animi atque.
+          Projeto desenvolvido com NextJS e Shadcn/UI. aprendendo a consumir uma API, e fazemos isso usando o API do pokeAPI, uma API criado para o meio de aprendizado, e com isso você vai poder aprimorar suas habilidades e criar projetos muito maiores.
+          Aqui estamos exercendo as habilidades de consumir uma API para mostrar os pokemons e usamos também a fonte de busca, que vai te ajudar a achar os pokemons pelo nome.
+          Agradeçemos sua presença!
         </p>
         <div className="pt-10 flex items-center justify-center">
           <Image
